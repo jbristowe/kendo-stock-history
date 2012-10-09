@@ -6,69 +6,78 @@
     <link href="http://cdn.kendostatic.com/2012.2.913/styles/kendo.common.min.css" rel="stylesheet" />
     <link href="http://cdn.kendostatic.com/2012.2.913/styles/kendo.default.min.css" rel="stylesheet" />
     <link href="http://cdn.kendostatic.com/2012.2.913/styles/kendo.dataviz.min.css" rel="stylesheet" />
+    <link href="examples.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
-</head>
-<body>
-	<div id="stockHistory">
-		<h3 class="example-title">Stock<span>History</span></h3>
-		<h4 class="example-description">Kendo UI Data Visualization Project</h4>
-		<div id="year-filtering-tabs" class="filtering-tabs"></div>
-		<h5 class="example-subtitle">Closing stock prices</h5>
-		<span class="metric">throughout <span class="selected-year"></span></span>
-		<div id="chart-type-chooser">
-			<strong class="example-subtitle radio-group-label">Chart type</strong>
-			<ul class="radio-group">
-				<li><input type="radio" name="chart-type" value="area" id="chart-type-area" checked><label for="chart-type-area">Area</label></li>
-				<li><input type="radio" name="chart-type" value="line" id="chart-type-line"><label for="chart-type-line">Line</label></li>
-			</ul>
-		</div>
-		<div id="yearly-stock-prices"></div>
-		<script type="text/x-kendo-template" id="company-info-template">
-        	<dl class="stat first">
-        		<dt class="example-subtitle">
-        			#= name # stock price
-        			<span class="metric">US dollars</span>
-        		</dt>
-        		<dd class="eoy-closing"></dd>
-        	</dl>
-            <div class="company-trends">
-                <div class="example-subtitle">
-                    Stock market trends
-                    <span class="metric">throughout the year</span>
-                </div>
-                <dl class="stat trend-container highest-container">
-                    <dt class="example-subtitle">Highest stock price</dt>
-                    <dd class="highest"></dd>
-                    <dd class="sparkline highest-sparkline"></dd>
-                </dl>
-                <dl class="stat trend-container lowest-container">
-                    <dt class="example-subtitle">Lowest stock price</dt>
-                    <dd class="lowest"></dd>
-                    <dd class="sparkline lowest-sparkline"></dd>
-                </dl>
-                <dl class="stat trend-container">
-                    <dt class="example-subtitle">YoY change</dt>
-                    <dd class="relative-value"></dd>
-                    <dd class="sparkline relative-value-sparkline"></dd>
-                </dl>
-                <div class="relative-value-pie"></div>
-            </div>
-            <div class="separator"></div>
-            <dl class="stat first">
-                <dt class="example-subtitle">
-                    volume of traded stocks
-                    <span class="metric">traded stocks</span>
-                </dt>
-                <dd class="volume"></dd>
-            </dl>
-            <div class="volume-chart"></div>
-        </script>
-        <div id="company-filtering-tabs" class="filtering-tabs"></div>
-        <div class="company-info" id="google"></div>
-    </div>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="http://cdn.kendostatic.com/2012.2.913/js/kendo.all.min.js"></script>
+    <script src="examples.js"></script>
     <script src="app.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="exampleWrap">
+            <script>preventFOUC()</script>
+            <div id="example" class="k-content absConf">
+                <div class="demo-section">
+                    <h3 class="example-title">Stock<span>History</span></h3>
+                    <h4 class="example-description">Kendo UI Data Visualization Project</h4>
+                    <div id="year-filtering-tabs" class="filtering-tabs"></div>
+                    <h5 class="example-subtitle">Closing stock prices</h5>
+                    <span class="metric">throughout <span class="selected-year"></span></span>
+                    <div id="chart-type-chooser">
+                        <strong class="example-subtitle radio-group-label">Chart type</strong>
+                        <ul class="radio-group">
+                            <li><input type="radio" name="chart-type" value="area" id="chart-type-area" checked><label for="chart-type-area">Area</label></li>
+                            <li><input type="radio" name="chart-type" value="line" id="chart-type-line"><label for="chart-type-line">Line</label></li>
+                        </ul>
+                    </div>
+                    <div id="yearly-stock-prices"></div>
+                    <script type="text/x-kendo-template" id="company-info-template">
+                        <dl class="stat first">
+                            <dt class="example-subtitle">
+                                #= name # stock price
+                                <span class="metric">US dollars</span>
+                            </dt>
+                            <dd class="eoy-closing"></dd>
+                        </dl>
+                        <div class="company-trends">
+                            <div class="example-subtitle">
+                                Stock market trends
+                                <span class="metric">throughout the year</span>
+                            </div>
+                            <dl class="stat trend-container highest-container">
+                                <dt class="example-subtitle">Highest stock price</dt>
+                                <dd class="highest"></dd>
+                                <dd class="sparkline highest-sparkline"></dd>
+                            </dl>
+                            <dl class="stat trend-container lowest-container">
+                                <dt class="example-subtitle">Lowest stock price</dt>
+                                <dd class="lowest"></dd>
+                                <dd class="sparkline lowest-sparkline"></dd>
+                            </dl>
+                            <dl class="stat trend-container">
+                                <dt class="example-subtitle">YoY change</dt>
+                                <dd class="relative-value"></dd>
+                                <dd class="sparkline relative-value-sparkline"></dd>
+                            </dl>
+                            <div class="relative-value-pie"></div>
+                        </div>
+                        <div class="separator"></div>
+                        <dl class="stat first">
+                            <dt class="example-subtitle">
+                                volume of traded stocks
+                                <span class="metric">traded stocks</span>
+                            </dt>
+                            <dd class="volume"></dd>
+                        </dl>
+                        <div class="volume-chart"></div>
+                    </script>
+                    <div id="company-filtering-tabs" class="filtering-tabs"></div>
+                    <div class="company-info" id="google"></div>
+                </div>
+                <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300" rel="stylesheet">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
